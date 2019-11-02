@@ -1,15 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿// <copyright file="Program.cs" company="Blaze Spaces">
+// Copyright (c) Blaze Spaces. All rights reserved.
+// </copyright>
 
 namespace HelloWorldConsolePrompt
 {
-    class Program
+    using System;
+
+    /// <summary>
+    /// The main driver class.
+    /// </summary>
+    public class Program
     {
-        static void Main(string[] args)
+        /// <summary>
+        /// The driver method.
+        /// </summary>
+        /// <param name="args">Project specific arguments.</param>
+        public static void Main(string[] args)
         {
+            Console.WriteLine(Resources.FirstNamePromptText);
+            var firstName = Console.ReadLine();
+
+            Console.WriteLine(Resources.LastNamePromptText);
+            var lastName = Console.ReadLine();
+
+            Console.WriteLine($"Hello {firstName} {lastName}");
         }
     }
 }
